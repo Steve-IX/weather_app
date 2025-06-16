@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { fetchWeatherData, searchLocations } from '@/utils/api';
+import { fetchWeatherData } from '@/utils/api';
 import { WeatherData } from '@/types/weather';
-import { FiSearch, FiMapPin } from 'react-icons/fi';
+import { FiSearch } from 'react-icons/fi';
 import { WiDaySunny, WiRain, WiSnow, WiThunderstorm, WiFog } from 'react-icons/wi';
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
     try {
       const data = await fetchWeatherData(searchQuery);
       setWeatherData(data);
-    } catch (err) {
+    } catch {
       setError('Failed to fetch weather data. Please try again.');
     } finally {
       setLoading(false);
