@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { fetchWeatherData } from '@/utils/api';
 import { WeatherData } from '@/types/weather';
-import { FiSearch, FiMapPin, FiThermometer, FiWind, FiDroplet, FiSun, FiEye, FiClock, FiNavigation, FiCompass, FiZap } from 'react-icons/fi';
-import { WiDaySunny, WiRain, WiSnow, WiThunderstorm, WiFog, WiCloudy, WiNightClear, WiHumidity, WiStrongWind, WiBarometer, WiThermometer, WiVisibility } from 'react-icons/wi';
+import { FiSearch, FiMapPin, FiThermometer, FiDroplet, FiSun, FiEye, FiClock, FiCompass } from 'react-icons/fi';
+import { WiDaySunny, WiRain, WiSnow, WiThunderstorm, WiFog, WiCloudy, WiHumidity, WiStrongWind } from 'react-icons/wi';
 
 export default function Home() {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
